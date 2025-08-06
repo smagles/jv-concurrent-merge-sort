@@ -22,7 +22,7 @@ public class MergeSortAction extends RecursiveAction {
     @Override
     protected void compute() {
         if (end - start <= THRESHOLD) {
-            Arrays.sort(array);
+            Arrays.sort(array, start, end);
         } else {
             int mid = start + (end - start) / 2;
             MergeSortAction left = new MergeSortAction(start, mid, array);
